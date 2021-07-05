@@ -1,0 +1,47 @@
+{
+  "name": "vue-fragment",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "vue-cli-service serve --port 7080",
+    "build": "vue-cli-service build && npm run copyfiles",
+    "copyfiles": "copyfiles -f dist/js/app.js dist/css/app.css dist && node -e \"require('fs').renameSync('dist/app.js', 'dist/vueFragment.js')\"  && node -e \"require('fs').renameSync('dist/app.css', 'dist/vueFragment.css')\"",
+    "upload": "copyfiles -f dist/vueFragment.js dist/vueFragment.css ../mini-mui/storage"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0",
+    "copyfiles": "^2.4.1",
+    "fs": "0.0.1-security",
+    "glob-fs": "^0.1.7"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

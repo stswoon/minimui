@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MiniMUI</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .section {
+            width: 32%;
+        }
+
+        .fragmentPlaceholder {
+            overflow: auto;
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+<script src="//localhost:5001/minimui.js"></script>
+
+<div class="section">
+    <input type="button" value="Load Angular Fragment"
+           onclick="minimui.createFragment('angularFragment', '#angularFragment')">
+    <br/>
+    <div id="angularFragment" class="fragmentPlaceholder"></div>
+</div>
+
+<div class="section">
+    <input type="button" value="Load React Fragment"
+           onclick="minimui.createFragment('reactFragment', '#reactFragment')">
+    <br/>
+    <div id="reactFragment" class="fragmentPlaceholder"></div>
+</div>
+
+<div class="section">
+    <input type="button" value="Load Vue Fragment"
+           onclick="minimui.createFragment('vueFragment', '#vueFragment')">
+    <br/>
+    <div id="vueFragment" class="fragmentPlaceholder"></div>
+</div>
+
+</body>
+</html>

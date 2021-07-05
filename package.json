@@ -1,0 +1,32 @@
+{
+  "name": "noname",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "inst": "npm run inst:this && npm run inst:mini-mui && npm run inst:host-app && npm run inst:angular && npm run inst:react && npm run inst:vue",
+    "build": "npm run build:angular && npm run build:react && npm run build:vue",
+    "upload": "npm run upload:angular && npm run upload:react && npm run upload:vue",
+    "start": "npm-run-all --parallel start:mini-mui start:host-app",
+    "-----": "echo 0",
+    "local-dev:angular": "cd angular-fragment && npm run start",
+    "local-dev:react": "cd react-fragment && npm run start",
+    "local-dev:vue": "cd vue-fragment && npm run start",
+    "start:mini-mui": "cd mini-mui && npm run start",
+    "start:host-app": "cd host-app && npm run start",
+    "inst:this": "npm i",
+    "inst:mini-mui": "cd mini-mui && npm i",
+    "inst:host-app": "cd host-app && npm i",
+    "inst:angular": "cd angular-fragment && npm i",
+    "inst:react": "cd react-fragment && npm i",
+    "inst:vue": "cd vue-fragment && npm i",
+    "upload:angular": "cd angular-fragment && npm run upload",
+    "upload:react": "cd react-fragment && npm run upload",
+    "upload:vue": "cd vue-fragment && npm run upload",
+    "build:angular": "cd angular-fragment && npm run build",
+    "build:react": "cd react-fragment && npm run build",
+    "build:vue": "cd vue-fragment && npm run build"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

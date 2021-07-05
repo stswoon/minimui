@@ -1,0 +1,12 @@
+/.idea/
+/angular-fragment/node_modules/
+/mini-mui/node_modules/
+/react-fragment/node_modules/
+/host-app/node_modules/
+/vue-fragment/node_modules/
+/node_modules
+/vue-fragment/dist/
+/react-fragment/build/
+/react-fragment/dist/
+/mini-mui/storage/
+/angular-fragment/dist/
